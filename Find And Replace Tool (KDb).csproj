@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>FindAndReplaceTool</RootNamespace>
+    <PackageId>Find And Replace Tool</PackageId>
+    <Authors>Kim Debroye</Authors>
+    <Company></Company>
+    <Product>Find And Replace Tool</Product>
+    <Description>A stand-alone command line based Find &amp; Replace tool, optimized in order to replace text values in plain and/or configuration based text documents.</Description>
+    <Copyright>Kim Debroye</Copyright>
+    <AssemblyName>fnr</AssemblyName>
+    <Version>1.0.0</Version>
+    <ApplicationIcon>Source\Assets\fnr.ico</ApplicationIcon>
+    <FileVersion>1.0.0.5</FileVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyVersion>1.0.0.5</AssemblyVersion>
+    <AssemblyOriginatorKeyFile>_GitIgnore\Kim Debroye.pfx</AssemblyOriginatorKeyFile>
+    <StartupObject>FindAndReplaceTool.Fnr</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>Build\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>Build\Release\</OutputPath>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineConstants></DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Build\**" />
+    <Compile Remove="_GitAssets\**" />
+    <Compile Remove="_GitIgnore\**" />
+    <EmbeddedResource Remove="Build\**" />
+    <EmbeddedResource Remove="_GitAssets\**" />
+    <EmbeddedResource Remove="_GitIgnore\**" />
+    <None Remove="Build\**" />
+    <None Remove="_GitAssets\**" />
+    <None Remove="_GitIgnore\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Source\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Ude">
+      <HintPath>Source\Dependencies\Ude.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
