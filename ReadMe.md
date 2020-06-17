@@ -717,5 +717,5 @@ single and/or double quotes and/or any separation character (*f.e. equal sign*)*
 ---
 
 ## Contact
-- [Feel free to contact me at Discord.](https://discord.com/channels/@me/536322521079742464)
+- [Feel free to contact me at Discord.](https://discord.com/users/536322521079742464)
 
