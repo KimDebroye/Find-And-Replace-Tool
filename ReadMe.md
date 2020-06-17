@@ -16,7 +16,7 @@
   - contains the current state at release of some experimental features I've been working on(*`--xpath` & `--jpath`*).
     - Although usable for testing purposes, these features are currently hidden and not included in the ReadMe nor in *`fnr --help`*, since I didn't feel they're ready for general usage yet (*XPath perhaps is, but since JSON is type sensitive, I'm strongly thinking of requiring a replacement type option as an addition.*).
 - The builds should be publishable for **Windows, Linux & macOS**, since the code is written using .Net Core framework in Visual Studio 2019.
-  - *Although being able to build for Linux & macOS, these builds are untested, since I coded this on a Windows-only PC build*.
+  - *Although being able to build for Linux & macOS, these builds are untested,<br />since I coded this on a Windows-only PC build*.
   - *Feel free to correct me if I'm wrong.*
 
 </details>
