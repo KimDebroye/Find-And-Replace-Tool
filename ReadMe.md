@@ -13,7 +13,7 @@
 - The initial release/build of Find And Replace Tool:
   - is what I like to call a Prerefactor version/release, as in I initially coded and tested the ideas I came up with, without worrying about code refactoring.
     - In a possible later stage, there could be room for code refactoring and additional features described hereafter, together with even more additional features like f.e. directory & file masking support.
-  - contains the current state at release of some experimental features I've been working on(*`--xpath` & `--jpath`*).
+  - contains the current state at release of some experimental features I've been working on (*`--xpath` & `--jpath`*).
     - Although usable for testing purposes, these features are currently hidden and not included in the ReadMe nor in *`fnr --help`*, since I didn't feel they're ready for general usage yet (*XPath perhaps is, but since JSON is type sensitive, I'm strongly thinking of requiring a replacement type option as an addition.*).
 - The builds should be publishable for **Windows, Linux & macOS**, since the code is written using .Net Core framework in Visual Studio 2019.
   - *Although being able to build for Linux & macOS, these builds are untested,<br />since I coded this on a Windows-only PC build*.
@@ -215,9 +215,9 @@ lowlatency                0
 - Reasons for not being matched:
   - The `--ignorecomments` flag is used.
     - Hence ignores f.e. *`#menu_layout	= "Cool Theme"`*.
-  - A --key "menu_layout" requirement is given.
+  - A `--key "menu_layout"` requirement is given.
     - Hence ignores f.e. *`no_menu_layout = "SuperCool Theme"`*.
-  - A --section "Custom Section" requirement is given.
+  - A `--section "Custom Section"` requirement is given.
     - Hence ignores f.e. *`menu_layout	Cool Theme`*.
   - *`example.ini`* already contains the "*SuperCool*" replace value.
     - Hence ignores f.e. *`menu_layout = "SuperCool Theme"`*.<br />
@@ -281,7 +281,7 @@ general
 
 **▸ Without regular expression**:
 - (*Without `--regex` flag*.)
-- (*Start looking from `--start` "System Y" instead*.)
+- (*Start looking from `--start "System Y"` instead*.)
 ``` bat
 .\fnr --path ".\example.ini" --find "Cool Theme" --replace "Another Cool Theme" --key "layout" --start "System Y" --end "general" --test
 ```
