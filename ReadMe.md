@@ -49,7 +49,7 @@
   - Complete separation of behind-the-scenes logic & calls.
   - A fine degree of customizability.
 - **Uses a behind-the-scenes generated, all-encompassing regular expression pattern**,<br />
-  *custom written and tested for various pitfalls by author (KDb) & beta-tester (Discord user Enkak)*.
+  *custom written and tested for various pitfalls by author ([KDb](https://discord.com/users/536322521079742464)) & beta-tester ([Enkak](https://discord.com/users/516621454092271617))*.
 
 ### ➥ This may be a good tool for people that
 
@@ -483,20 +483,20 @@ cmd /c pause | out-null
     - Useful when combined with `--regex` flag.
     - **Most important capture group replacements** (*see source code for other possibilities*):
       - `${value}` = **The matched result**.
-        - F.e. `.\fnr --find "auto|internal|custom" --replace "hello ${value}" --regex [...]`
-	  - Results in f.e. "hello auto", "hello internal", "hello custom", ...
+        - *F.e.* `.\fnr --find "auto|internal|custom" --replace "hello ${value}" --regex [...]`
+	    - **=>** Results in f.e. "*hello auto*", "*hello internal*", "*hello custom*", ...
       - `${section}` = **The section name**.
-        - F.e. `.\fnr --find "auto|internal|custom" --replace "${value} in section [${section}]" --section "A|B" --regex [...]`
-	  - Results in f.e. "auto in section [A]", "internal in section [B]", "custom in section [B]", ...
+        - *F.e.* `.\fnr --find "auto|internal|custom" --replace "${value} in section [${section}]" --section "A|B" --regex [...]`
+	    - **=>** Results in f.e. "*auto in section [A]*", "*internal in section [B]*", "*custom in section [B]*", ...
       - `${key}` = **The key name**.
-        - F.e. `.\fnr --find "auto|internal|custom" --replace "${key} = ${value}" --key "setting_x|setting_y" --regex [...]`
-	  - Results in f.e. "setting_x = auto", "setting_y = internal", "setting_y = custom", ...
+        - *F.e.* `.\fnr --find "auto|internal|custom" --replace "${key} = ${value}" --key "setting_x|setting_y" --regex [...]`
+	    - **=>** Results in f.e. "*setting_x = auto*", "*setting_y = internal*", "*setting_y = custom*", ...
       - `${context_left}` = **All characters preceding the matched value on the matched line**.
-        - F.e. `.\fnr --find "enabled|lorem" --replace "${context_left}${value}" --regex [...]`
-	  - Results in f.e. "   setting_x   =   'enabled", "setting_y = enabled", "This is some cool text preceding lorem", ...
+        - *F.e.* `.\fnr --find "enabled|lorem" --replace "${context_left}${value}" --regex [...]`
+	    - **=>** Results in f.e. "   *setting_x   =   'enabled*", "*setting_y = enabled*", "*This is some cool text preceding lorem*", ...
       - `${context_right}` = **All characters succeeding the matched value on the matched line**.
         - F.e. `.\fnr --find "enabled|lorem" --replace "${value}${context_right}" --regex [...]`
-	  - Results in f.e. "enabled'", "enabled", "lorem ipsum dolor sit amet.", ...
+	    - => Results in f.e. "*enabled'*", "*enabled*", "*lorem ipsum dolor sit amet.*", ...
 </details>
 
 ##### Syntax
