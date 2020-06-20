@@ -515,7 +515,8 @@ namespace FindAndReplaceTool
             #endregion
 
             #region Step 4) Avoid duplication?
-            if (!allowduplication)  // If the --allowduplication flag isn't provided, wrap around:
+            // If the --allowduplication flag isn't provided and replace value is found in find value (case insensitive), wrap around:
+            if (!allowduplication & find.IndexOf(replace, StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 #region In-depth (comment).
                 /*
@@ -774,7 +775,8 @@ namespace FindAndReplaceTool
             #endregion
 
             #region Step 3) Avoid duplication?
-            if (!allowduplication)  // If the --allowduplication flag isn't provided, wrap around:
+            // If the --allowduplication flag isn't provided and replace value is found in find value (case insensitive), wrap around:
+            if (!allowduplication & find.IndexOf(replace, StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 #region In-depth (comment).
                 /* See MatchAndReplace function. */
@@ -996,7 +998,8 @@ namespace FindAndReplaceTool
             #endregion
 
             #region Step 2) Avoid duplication?
-            if (!allowduplication)  // If the --allowduplication flag isn't provided, wrap around:
+            // If the --allowduplication flag isn't provided and replace value is found in find value (case insensitive), wrap around:
+            if (!allowduplication & find.IndexOf(replace, StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 #region In-depth (comment).
                 /* See MatchAndReplace function. */
