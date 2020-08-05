@@ -575,8 +575,8 @@ namespace FindAndReplaceTool
                 #endregion
 
                 rgxPattern = @"(?((?#exclude_replace_value)REPLACE)$donothing^|(?<!(?#exclude_trimmed_replace_value)NOTPRECEDEDBY)"
-                            .Replace("REPLACE", replace)
-                            .Replace("NOTPRECEDEDBY", notPrecededBy)
+                            .Replace("REPLACE", Regex.Escape(replace))
+                            .Replace("NOTPRECEDEDBY", Regex.Escape(notPrecededBy))
                       + rgxPattern +
                       @")"; // Close ((?Condition)yes|no).
             }
@@ -790,8 +790,8 @@ namespace FindAndReplaceTool
                 #endregion
 
                 rgxPattern = @"(?((?#exclude_replace_value)REPLACE)$donothing^|(?<!(?#exclude_trimmed_replace_value)NOTPRECEDEDBY)"
-                            .Replace("REPLACE", replace)
-                            .Replace("NOTPRECEDEDBY", notPrecededBy)
+                            .Replace("REPLACE", Regex.Escape(replace))
+                            .Replace("NOTPRECEDEDBY", Regex.Escape(notPrecededBy))
                       + rgxPattern +
                       @")"; // Close ((?Condition)yes|no).
             }
@@ -1013,8 +1013,8 @@ namespace FindAndReplaceTool
                 #endregion
 
                 rgxPattern = @"(?((?#exclude_replace_value)REPLACE)$donothing^|(?<!(?#exclude_trimmed_replace_value)NOTPRECEDEDBY)"
-                            .Replace("REPLACE", replace)
-                            .Replace("NOTPRECEDEDBY", notPrecededBy)
+                            .Replace("REPLACE", Regex.Escape(replace))
+                            .Replace("NOTPRECEDEDBY", Regex.Escape(notPrecededBy))
                       + rgxPattern +
                       @")"; // Close ((?Condition)yes|no).
             }
